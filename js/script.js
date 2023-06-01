@@ -64,6 +64,7 @@ accordion.forEach(acco =>{
    }
 });
 
+// function for selecting pizza size
 function selectSize(element) {
 
    const sizeOptions = document.querySelectorAll('.menu-item-attributes li');
@@ -77,3 +78,20 @@ function selectSize(element) {
 function scrollToMenu() {
    window.location.href = '#Menu';
 }
+
+
+document.addEventListener('DOMContentLoaded', function() {
+
+   var menuButton = document.getElementById('menu-btn');
+   var navigationMenu = document.querySelector('.navigation-menu');
+
+
+   menuButton.addEventListener('click', function() {
+
+      if (navigationMenu.style.display === 'block') {
+         navigationMenu.style.display = 'none';
+      } else {
+         navigationMenu.style.display = 'block';
+      }
+   });
+});
